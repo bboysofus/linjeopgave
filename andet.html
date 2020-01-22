@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaleable=no">
+        <title>Linjeopgave</title>
+        <link rel="icon" href="png/icon.png">
+
+        <style>
+            body{
+                margin: 0 auto;
+                padding: 0px 0px;
+                max-width: 100%;
+                background-color: #002e19;
+            }
+            ::selection{
+                background-color: black;
+                color: white;
+            }
+            #icon{
+                transition: 0.3s;
+                max-width: 5%;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+            #icon:hover{
+                max-width: 5.3%;
+                margin-bottom: 15px;
+            }
+
+            #item1-header{grid-area: header;}
+            #item2{grid-area: cubes;}
+            #item3{grid-area: speedcubing;}
+            #item4{grid-area: idk;}
+            #item5-footer{grid-area: footer;}
+            #item6{grid-area: space1;}
+            #item7{grid-area: space2;}
+
+            #grid-container{
+                display: grid;
+                grid-template-areas: 
+                    'header header header header header header'
+                    'space1 space1 cubes cubes space2 space2'
+                    'space1 space1 speedcubing idk space2 space2'
+                    'footer footer footer footer footer footer';
+                grid-gap: 10px;
+                position: relative;
+            }
+            #item1-header{
+                background-color: #006939;
+                color: black;
+                padding: 0px 65px;
+                margin: 3px;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid black;
+                border-radius: 5px;
+                }
+            #item2{
+                transition: 0.3s;
+                background-color: #61412c;
+                color: #1c1c1a;
+                padding: 20px 0;
+                margin-top: 220px;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid  #1c1c1a;
+                border-radius: 13px;
+                text-decoration: none;
+                }
+            #item2:hover{
+                background-color: #503624;
+                border: 3px solid black;
+                padding: 19px 0;
+                color: black;
+                cursor: pointer;
+            }
+            #item3{
+                transition: 0.3s;
+                background-color: #61412c;
+                color: #1c1c1a;
+                padding: 20px 0;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid  #1c1c1a;
+                border-radius: 13px;
+                text-decoration: none;
+                }
+            #item3:hover{
+                background-color: #503624;
+                border: 3px solid black;
+                padding: 19px 0;
+                color: black;
+                cursor: pointer;
+            }
+            #item4{
+                transition: 0.3s;
+                background-color: #61412c;
+                color: #1c1c1a;
+                padding: 20px 0;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid  #1c1c1a;
+                border-radius: 13px;
+                text-decoration: none;
+                }
+            #item4:hover{
+                background-color: #503624;
+                border: 3px solid black;
+                padding: 19px 0;
+                color: black;
+                cursor: pointer;
+            }
+            #item5-footer{
+                background-color: #006939;
+                padding: 0 auto;
+                bottom: 0;
+                margin: 3px;
+                margin-top: 210px;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid black;
+                border-radius: 5px;
+                }
+            #footer-container{
+                text-align: center;
+                overflow: hidden;
+                padding-top: 40px;
+            }
+            #footer-navi{
+                display:grid;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                margin-left: 525px;
+                margin-right: 500px;
+                text-align: left;
+                grid-template-areas:
+                'link1 link1 link2 link2 link3 link3';
+                grid-gap: 20px;
+            }
+            #link1{grid-area: link1;}
+            #link2{grid-area: link2;}
+            #link3{grid-area: link3;}
+            .navi-a{
+                color: white;
+                transition: all 0.3s;
+                font-size: 25px;
+                position: relative;
+                text-decoration: none;
+            }
+            .navi-a:hover{
+                color: #1c1c1a;
+            }
+            #link3{
+                margin-top: 35px;
+            }
+            p{
+                font-size: 16px;
+                color: #003315;
+            }
+</style>
+    </head>
+    <body>
+        <main>
+            <div id="grid-container">
+                <header id="item1-header">
+                    <div>
+                        <a href="index.html">
+                            <span title="Logo">
+                                <img id="icon" src="png/icon2.png">
+                            </span>
+                        </a>
+                    </div>
+                </header>
+                <footer id="item5-footer">
+                    <div id="footer-container">
+                        <div id="footer-navi">
+                            <ul id="link1">
+                                <a class="navi-a" href="Top 3 cubes.html">Top 3 cubes</a>
+                            </ul>
+                            <ul id="link2">
+                                <a class="navi-a" href="Speedcubing.html">Speedcubing</a>
+                            </ul>
+                            <ul id="link3">
+                                <a class="navi-a" href="andet.html">Andet</a>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Kode, design og layout: Sofus Birk Arnbjerg</p>
+                        </div>
+                        <div>
+                            <img style="max-width: 4%;" src="png/icon2.png">
+                        </div>
+                    </div>
+                </footer>
+                <div id="item6"></div>
+                <div id="item7"></div>
+            </div>
+        </main>
+    </body>
+    
+    <script>
+    </script>
+</html>
