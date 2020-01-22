@@ -30,9 +30,12 @@
             }
 
             #item1-header{grid-area: header;}
-            #item2{grid-area: cubes;}
-            #item3{grid-area: speedcubing;}
-            #item4{grid-area: idk;}
+            #vid1{grid-area: vid1;}
+            #vid2{grid-area: vid2;}
+            #vid3{grid-area: vid3;}
+            #box2{grid-area: box2;}
+            #box3{grid-area: box3;}
+            #box4{grid-area: box4;}
             #item5-footer{grid-area: footer;}
             #item6{grid-area: space1;}
             #item7{grid-area: space2;}
@@ -40,11 +43,14 @@
             #grid-container{
                 display: grid;
                 grid-template-areas: 
-                    'header header header header header header'
-                    'space1 space1 cubes cubes space2 space2'
-                    'space1 space1 speedcubing idk space2 space2'
-                    'footer footer footer footer footer footer';
-                grid-gap: 10px;
+                    'header header header header header'
+                    'space1 vid1 vid1 vid1 space2'
+                    'space1 vid2 vid2 vid2 space2'
+                    'space1 vid3 vid3 vid3 space2'
+                    'space1 box2 box3 box4 space2'
+                    'footer footer footer footer footer';
+                grid-column-gap: 100px;
+                grid-row-gap: 20px;
                 position: relative;
             }
             #item1-header{
@@ -57,50 +63,54 @@
                 position: relative;
                 border: 2px solid black;
                 border-radius: 5px;
-                }
-            #item2{
-                transition: 0.3s;
-                background-color: #61412c;
-                color: #1c1c1a;
-                padding: 20px 0;
-                margin-top: 220px;
-                font-size: 30px;
-                text-align: center;
-                position: relative;
-                border: 2px solid  #1c1c1a;
-                border-radius: 13px;
-                text-decoration: none;
-                }
-            #item2:hover{
-                background-color: #503624;
-                border: 3px solid black;
-                padding: 19px 0;
-                color: black;
-                cursor: pointer;
             }
-            #item3{
-                transition: 0.3s;
-                background-color: #61412c;
-                color: #1c1c1a;
-                padding: 20px 0;
-                font-size: 30px;
-                text-align: center;
-                position: relative;
-                border: 2px solid  #1c1c1a;
-                border-radius: 13px;
-                text-decoration: none;
-                }
-            #item3:hover{
-                background-color: #503624;
-                border: 3px solid black;
-                padding: 19px 0;
-                color: black;
-                cursor: pointer;
+            #vid1{transition: all 0.3s;}
+            #vid1:hover{background-color: #004123;}
+            #vid2{transition: all 0.3s;}
+            #vid2:hover{background-color: #004123;}
+            #vid3{transition: all 0.3s;}
+            #vid3:hover{background-color: #004123;}
+            #vidtext{
+                font-size: 40px;
+                color: rgb(212, 255, 183);
             }
-            #item4{
+            #vidtext span{
+                font-size: 20px;
+                color: rgb(87, 131, 66);
+            }
+                
+            div.box2{
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: 20px;
                 transition: 0.3s;
-                background-color: #61412c;
-                color: #1c1c1a;
+                background-color: #7cffc413;
+                color: rgb(212, 255, 183);
+                padding: 20px 0;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid  #1c1c1a;
+                border-radius: 13px;
+                text-decoration: none;
+            }
+            div.box2 div{
+                color: rgb(87, 131, 66);
+                padding: 10px;
+                text-align: left;
+                display: none;
+            }
+            .box2:hover{
+                padding: 20px 0;
+                background-color: #7cffc421;
+            }
+            .box3{
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: 20px;
+                transition: 0.3s;
+                background-color: #7cffc413;
+                color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
                 text-align: center;
@@ -109,19 +119,48 @@
                 border-radius: 13px;
                 text-decoration: none;
                 }
-            #item4:hover{
-                background-color: #503624;
-                border: 3px solid black;
-                padding: 19px 0;
-                color: black;
+            div.box3 div{
+                color: rgb(87, 131, 66);
+                padding: 10px;
+                text-align: left;
+                display: none;
+            }
+            .box3:hover{
+                background-color: #7cffc421;
+                padding: 20px 0;
+            }
+            .box4{
                 cursor: pointer;
+                overflow: hidden;
+                margin-top: 20px;
+                transition: 0.3s;
+                background-color: #7cffc413;
+                color: rgb(212, 255, 183);
+                padding: 20px 0;
+                font-size: 30px;
+                text-align: center;
+                position: relative;
+                border: 2px solid  #1c1c1a;
+                border-radius: 13px;
+                text-decoration: none;
+                }
+            div.box4 div{
+                color: rgb(87, 131, 66);
+                padding: 10px;
+                text-align: left;
+                display: none;
+            }
+            .box4:hover{
+                background-color: #7cffc421;
+                padding: 20px 0;
             }
             #item5-footer{
+                overflow: hidden;
                 background-color: #006939;
                 padding: 0 auto;
                 bottom: 0;
                 margin: 3px;
-                margin-top: 210px;
+                margin-top: 99px;
                 font-size: 30px;
                 text-align: center;
                 position: relative;
@@ -137,16 +176,17 @@
                 display:grid;
                 margin-top: 20px;
                 margin-bottom: 30px;
-                margin-left: 525px;
+                margin-left: 517px;
                 margin-right: 500px;
                 text-align: left;
                 grid-template-areas:
-                'link1 link1 link2 link2 link3 link3';
+                'link1 link2 link3 link4';
                 grid-gap: 20px;
             }
             #link1{grid-area: link1;}
             #link2{grid-area: link2;}
             #link3{grid-area: link3;}
+            #link4{grid-area: link4;}
             .navi-a{
                 color: white;
                 transition: all 0.3s;
@@ -157,19 +197,58 @@
             .navi-a:hover{
                 color: #1c1c1a;
             }
-            #link3{
-                margin-top: 35px;
+            #link4{
+                margin-top: 33px;
             }
-            p{
+            #credz{
                 font-size: 16px;
                 color: #003315;
             }
-</style>
+
+            #back{
+                background-color: #00693a8e;
+                position: fixed;
+                transition: 0.3s;
+                color: white;
+                font-size: 21px;
+                font-style: italic;
+                float: left;
+                padding: 7px;
+                margin-top: 50px;
+                border: 1px solid white;
+                border-radius: 30px;
+            }
+            #back:hover{
+                font-size: 23px;
+                border: 3px solid white;
+            }
+            .arrow {
+                transform: rotate(-135deg);
+                transition: all 0.6s;
+                display: inline-block;
+                margin-bottom: 1px;
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid white;
+                border-right: 2px solid white;
+            }
+            .arrow-left:hover {
+                transform: rotate(-855deg);
+            }
+
+        </style>
     </head>
     <body>
         <main>
             <div id="grid-container">
+
                 <header id="item1-header">
+                    <a href="index.html">
+                        <div id="back">
+                            <div style="display: inline;"><span class="arrow arrow-left"></span></div>
+                            Tilbage
+                        </div>
+                    </a>
                     <div>
                         <a href="index.html">
                             <span title="Logo">
@@ -178,33 +257,56 @@
                         </a>
                     </div>
                 </header>
+                
                 <footer id="item5-footer">
                     <div id="footer-container">
                         <div id="footer-navi">
                             <ul id="link1">
-                                <a class="navi-a" href="Top 3 cubes.html">Top 3 cubes</a>
+                                <a class="navi-a" href="index.html">Forside</a>
                             </ul>
                             <ul id="link2">
-                                <a class="navi-a" href="Speedcubing.html">Speedcubing</a>
+                                <a class="navi-a" href="Top 3 cubes.html">Top 3 cubes</a>
                             </ul>
                             <ul id="link3">
+                                <a class="navi-a" href="Speedcubing.html">Speedcubing</a>
+                            </ul>
+                            <ul id="link4">
                                 <a class="navi-a" href="andet.html">Andet</a>
                             </ul>
                         </div>
                         <div>
-                            <p>Kode, design og layout: Sofus Birk Arnbjerg</p>
+                            <p id="credz">Kode, design og layout: Sofus Birk Arnbjerg</p>
                         </div>
                         <div>
                             <img style="max-width: 4%;" src="png/icon2.png">
                         </div>
                     </div>
                 </footer>
+
                 <div id="item6"></div>
                 <div id="item7"></div>
+
             </div>
         </main>
     </body>
     
     <script>
+        function toggleText1(id){
+            var theText = document.getElementById(id);
+            (theText.style.display=='block') ? theText.style.display='none' :
+            theText.style.display='block';
+        }
+
+        function toggleText2(id){
+            var theText = document.getElementById(id);
+            (theText.style.display=='block') ? theText.style.display='none' :
+            theText.style.display='block';
+        }
+
+        function toggleText3(id){
+            var theText = document.getElementById(id);
+            (theText.style.display=='block') ? theText.style.display='none' :
+            theText.style.display='block';
+        }
     </script>
 </html>
