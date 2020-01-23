@@ -30,9 +30,10 @@
             }
 
             #item1-header{grid-area: header;}
-            #box2{grid-area: box2;}
-            #box3{grid-area: box3;}
-            #box4{grid-area: box4;}
+            #h1{grid-area: h1;}
+            .box2{grid-area: box2;}
+            .box3{grid-area: box3;}
+            .box4{grid-area: box4;}
             #item5-footer{grid-area: footer;}
             #item6{grid-area: space1;}
             #item7{grid-area: space2;}
@@ -41,6 +42,7 @@
                 display: grid;
                 grid-template-areas: 
                     'header header header header header'
+                    'space1 h1 h1 h1 space2'
                     'space1 box2 box3 box4 space2'
                     'footer footer footer footer footer';
                 grid-column-gap: 100px;
@@ -57,12 +59,17 @@
                 position: relative;
                 border: 2px solid black;
                 border-radius: 5px;
-                }
+            }
+                
             div.box2{
+                cursor: pointer;
                 overflow: hidden;
+                margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
-                color: #1c1c1a;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
+                color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
                 text-align: center;
@@ -70,20 +77,29 @@
                 border: 2px solid  #1c1c1a;
                 border-radius: 13px;
                 text-decoration: none;
-                }
+            }
+            div.box2:hover{
+                padding: 20px 0;
+                background-position: bottom;
+            }
             div.box2 div{
+                color: rgb(87, 131, 66);
+                background-color: #093e26;
                 padding: 10px;
                 text-align: left;
+                font-size: 23px;
                 display: none;
             }
-            .box2:hover{
-                padding: 20px 0;
-            }
-            .box3{
+
+            div.box3{
+                cursor: pointer;
                 overflow: hidden;
+                margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
-                color: #1c1c1a;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
+                color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
                 text-align: center;
@@ -91,20 +107,29 @@
                 border: 2px solid  #1c1c1a;
                 border-radius: 13px;
                 text-decoration: none;
-                }
+            }
+            div.box3:hover{
+                background-position: bottom;
+                padding: 20px 0;
+            }
             div.box3 div{
+                color: rgb(87, 131, 66);
+                background-color: #093e26;
                 padding: 10px;
                 text-align: left;
+                font-size: 23px;
                 display: none;
             }
-            .box3:hover{
-                padding: 20px 0;
-            }
-            .box4{
+
+            div.box4{
+                cursor: pointer;
                 overflow: hidden;
+                margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
-                color: #1c1c1a;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
+                color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
                 text-align: center;
@@ -113,13 +138,17 @@
                 border-radius: 13px;
                 text-decoration: none;
                 }
+            div.box4:hover{
+                background-position: bottom;
+                padding: 20px 0;
+            }
             div.box4 div{
+                color: rgb(87, 131, 66);
+                background-color: #093e26;
                 padding: 10px;
                 text-align: left;
+                font-size: 23px;
                 display: none;
-            }
-            .box4:hover{
-                padding: 20px 0;
             }
             #item5-footer{
                 overflow: hidden;
@@ -225,6 +254,7 @@
                     </div>
                 </header>
 
+                <h1 id="h1" style="text-align: center; font-size: 50px; color: white; margin: 40px 0;">2x2 Cube</h1>
                 <div class="box2" onclick="toggleText1('toToggle1')">Text
                     <div id="toToggle1">Text</div>
                 </div>

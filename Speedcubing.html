@@ -30,6 +30,7 @@
             }
 
             #item1-header{grid-area: header;}
+            #h1{grid-area: h1;}
             #vid1{grid-area: vid1;}
             #vid2{grid-area: vid2;}
             #vid3{grid-area: vid3;}
@@ -44,6 +45,7 @@
                 display: grid;
                 grid-template-areas: 
                     'header header header header header'
+                    'space1 h1 h1 h1 space2'
                     'space1 vid1 vid1 vid1 space2'
                     'space1 vid2 vid2 vid2 space2'
                     'space1 vid3 vid3 vid3 space2'
@@ -64,12 +66,27 @@
                 border: 2px solid black;
                 border-radius: 5px;
             }
-            #vid1{transition: all 0.3s;}
-            #vid1:hover{background-color: #004123;}
-            #vid2{transition: all 0.3s;}
-            #vid2:hover{background-color: #004123;}
-            #vid3{transition: all 0.3s;}
-            #vid3:hover{background-color: #004123;}
+            #vid1{
+                background: linear-gradient( to left, #002e19 50%, #004123 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all ease 0.4s;
+            }
+            #vid1:hover{background-position: left bottom;}
+            #vid2{
+                background: linear-gradient( to right, #002e19 50%, #004123 50%);
+                background-size: 200% 100%;
+                background-position: left bottom;
+                transition: all ease 0.4s;
+            }
+            #vid2:hover{background-position: right bottom;}
+            #vid3{
+                background: linear-gradient( to left, #002e19 50%, #004123 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all ease 0.4s;
+            }
+            #vid3:hover{background-position: left bottom;}
             #vidtext{
                 font-size: 40px;
                 color: rgb(212, 255, 183);
@@ -84,7 +101,9 @@
                 overflow: hidden;
                 margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
                 color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
@@ -93,23 +112,28 @@
                 border: 2px solid  #1c1c1a;
                 border-radius: 13px;
                 text-decoration: none;
+            }
+            div.box2:hover{
+                padding: 20px 0;
+                background-position: bottom;
             }
             div.box2 div{
                 color: rgb(87, 131, 66);
+                background-color: #093e26;
                 padding: 10px;
                 text-align: left;
+                font-size: 23px;
                 display: none;
             }
-            .box2:hover{
-                padding: 20px 0;
-                background-color: #7cffc421;
-            }
-            .box3{
+
+            div.box3{
                 cursor: pointer;
                 overflow: hidden;
                 margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
                 color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
@@ -119,22 +143,27 @@
                 border-radius: 13px;
                 text-decoration: none;
                 }
+            div.box3:hover{
+                background-position: bottom;
+                padding: 20px 0;
+            }
             div.box3 div{
                 color: rgb(87, 131, 66);
+                background-color: #093e26;
                 padding: 10px;
                 text-align: left;
+                font-size: 23px;
                 display: none;
             }
-            .box3:hover{
-                background-color: #7cffc421;
-                padding: 20px 0;
-            }
-            .box4{
+
+            div.box4{
                 cursor: pointer;
                 overflow: hidden;
                 margin-top: 20px;
                 transition: 0.3s;
-                background-color: #7cffc413;
+                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
+                background-size: 100% 200%;
+                background-position: top;
                 color: rgb(212, 255, 183);
                 padding: 20px 0;
                 font-size: 30px;
@@ -144,16 +173,19 @@
                 border-radius: 13px;
                 text-decoration: none;
                 }
-            div.box4 div{
-                color: rgb(87, 131, 66);
-                padding: 10px;
-                text-align: left;
-                display: none;
-            }
-            .box4:hover{
-                background-color: #7cffc421;
+            div.box4:hover{
+                background-position: bottom;
                 padding: 20px 0;
             }
+            div.box4 div{
+                color: rgb(87, 131, 66);
+                background-color: #093e26;
+                padding: 10px;
+                text-align: left;
+                font-size: 23px;
+                display: none;
+            }
+
             #item5-footer{
                 overflow: hidden;
                 background-color: #006939;
@@ -258,6 +290,7 @@
                     </div>
                 </header>
 
+                <h1 id="h1" style="text-align: center; font-size: 50px; color: white; margin: 40px 0; margin-bottom: 50px;">Speedcubing</h1>
                 <div id="vid1" style="margin-left: 200px;">
                     <iframe id="clip" style="float: left;"
                     width="560" height="315" frameborder="1" allowfullscreen
@@ -300,15 +333,23 @@
                         </span>
                     </p>
                 </div>
-                <div class="box2" onclick="toggleText1('toToggle1')">Konkurrencer
-                    <div id="toToggle1">Text</div>
+                <div class="box2" onclick="toggleText1('toToggle1')">Hvad er det?
+                    <div id="toToggle1">
+                        <p style="margin: 0;">
+                            "Speedcubing" eller "speedcubere" er et begræb, man<br>
+                            bruger om folk, der løser Rubik's Cubes så hurtigt som muligt.<br>
+
+                        </p>
+                    </div>
                 </div>
 
                 <div class="box3" onclick="toggleText2('toToggle2')">WCA
-                    <div id="toToggle2">Text</div>   
+                    <div id="toToggle2">Text
+
+                    </div>   
                 </div>
 
-                <div class="box4" onclick="toggleText3('toToggle3')">Text
+                <div class="box4" onclick="toggleText3('toToggle3')">Konkurrencer
                     <div id="toToggle3">Text</div>
                 </div>
 
