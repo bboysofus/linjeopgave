@@ -35,7 +35,6 @@
             #vid2{grid-area: vid2;}
             .box2{grid-area: box2;}
             .box3{grid-area: box3;}
-            .box4{grid-area: box4;}
             #item5-footer{grid-area: footer;}
             #item6{grid-area: space1;}
             #item7{grid-area: space2;}
@@ -43,12 +42,12 @@
             #grid-container{
                 display: grid;
                 grid-template-areas: 
-                    'header header header header header'
-                    'space1 h1 h1 h1 space2'
-                    'space1 vid1 vid1 vid1 space2'
-                    'space1 vid2 vid2 vid2 space2'
-                    'space1 box2 box3 box4 space2'
-                    'footer footer footer footer footer';
+                    'header header header header'
+                    'space1 h1 h1 space2'
+                    'space1 vid1 vid1 space2'
+                    'space1 vid2 vid2 space2'
+                    'space1 box2 box3 space2'
+                    'footer footer footer footer';
                 grid-column-gap: 100px;
                 grid-row-gap: 20px;
                 position: relative;
@@ -150,37 +149,6 @@
                 display: none;
             }
 
-            div.box4{
-                cursor: pointer;
-                overflow: hidden;
-                margin-top: 20px;
-                transition: 0.3s;
-                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
-                background-size: 100% 200%;
-                background-position: top;
-                color: rgb(212, 255, 183);
-                padding: 20px 0;
-                font-size: 30px;
-                text-align: center;
-                position: relative;
-                border: 2px solid  #1c1c1a;
-                border-radius: 13px;
-                text-decoration: none;
-            }
-            div.box4:hover{
-                background-position: bottom;
-                padding: 20px 0;
-            }
-            div.box4 div{
-                color: rgb(87, 131, 66);
-                background-color: #093e26;
-                padding: 10px;
-                margin-top: 20px;
-                text-align: left;
-                font-size: 23px;
-                display: none;
-            }
-            
             #item5-footer{
                 overflow: hidden;
                 background-color: #006939;
@@ -317,25 +285,40 @@
                     <div id="toToggle1">
                         <p style="margin: 0; padding-left: 10px;">
                             Cuben 3x3 er den mest populære inden for begræbet <span style="font-style: italic;"><strong>"puzzles"</strong></span>,<br>
-                            hvilket omringer alle slags hjernevridere.
+                            hvilket omringer alle slags hjernevridere.<br>
+                            <br>
+                            Den originale 3x3 Rubik's Cube er opfundet af <span style="font-style: italic;"><strong>Ernő Rubik</strong></span> i <span style="font-style: italic;"><strong>år 1974</strong></span><br>
+                            og blev hurtigt verdenskendt.<br>
+                            <br>
+                            Rubik's Cuben har vundet flere <span style="font-style: italic;"><strong>"Toy of the Year"</strong></span>-medaljer, og den blev<br>
+                            et stykke hovedlejetøj inden for 1980'ernes populære kultur.<br>
+                            <br>
+                            I dag er der blevet solgt flere end <span style="font-style: italic;"><strong>350 millioner</strong></span> Rubik's Cubes i verden,<br>
+                            hvilket gør den til et af de bedst sælgende stykker legetøj nogensinde.<br>
+                            <br>
+                            Nu findes der rigtig mange producenter, der producerer både normale cubes<br>
+                            samt speedcubes til speedcubing.<br>
+                            Heriblandt er der populære producenter som <span style="font-style: italic;"><strong>"GAN"</strong></span> og <span style="font-style: italic;"><strong>"MoYu"</strong></span>.
                         </p>
                     </div>
                 </div>
 
-                <div class="box3" onclick="toggleText2('toToggle2')">Text
+                <div class="box3" onclick="toggleText2('toToggle2')">Cube modeller
                     <div id="toToggle2">
                         <p style="margin: 0; padding-left: 10px;">
-                            Text
+                            <span style="font-size: 30px; text-decoration: underline;"><strong>Populære speedcubes</strong></span><br>
+                            <br>
+                            - MoYu Weilong GTS (1, 2, 3, Magnetic)<br>
+                            <br>
+                            - MoYu AoLong (1, 2)<br>
+                            <br>
+                            - QiYi The Valk (1, 2, 3, Power)<br>
+                            <br>
+                            - QiYi Thunderclap (1, 2, 3, Magnetic)<br>
+                            <br>
+                            - GAN 356 X<br>
                         </p>
                     </div>   
-                </div>
-
-                <div class="box4" onclick="toggleText3('toToggle3')">Text
-                    <div id="toToggle3">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
-                        </p>
-                    </div>
                 </div>
 
                 <footer id="item5-footer">
@@ -378,12 +361,6 @@
         }
 
         function toggleText2(id){
-            var theText = document.getElementById(id);
-            (theText.style.display=='block') ? theText.style.display='none' :
-            theText.style.display='block';
-        }
-
-        function toggleText3(id){
             var theText = document.getElementById(id);
             (theText.style.display=='block') ? theText.style.display='none' :
             theText.style.display='block';
