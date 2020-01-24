@@ -31,6 +31,8 @@
 
             #item1-header{grid-area: header;}
             #h1{grid-area: h1;}
+            #vid1{grid-area: vid1;}
+            #vid2{grid-area: vid2;}
             .box2{grid-area: box2;}
             .box3{grid-area: box3;}
             .box4{grid-area: box4;}
@@ -43,6 +45,8 @@
                 grid-template-areas: 
                     'header header header header header'
                     'space1 h1 h1 h1 space2'
+                    'space1 vid1 vid1 vid1 space2'
+                    'space1 vid2 vid2 vid2 space2'
                     'space1 box2 box3 box4 space2'
                     'footer footer footer footer footer';
                 grid-column-gap: 100px;
@@ -59,6 +63,29 @@
                 position: relative;
                 border: 2px solid black;
                 border-radius: 5px;
+            }
+            
+            #vid1{
+                background: linear-gradient( to left, #002e19 50%, #004123 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all ease 0.4s;
+            }
+            #vid1:hover{background-position: left bottom;}
+            #vid2{
+                background: linear-gradient( to right, #002e19 50%, #004123 50%);
+                background-size: 200% 100%;
+                background-position: left bottom;
+                transition: all ease 0.4s;
+            }
+            #vid2:hover{background-position: right bottom;}
+            #vidtext{
+                font-size: 40px;
+                color: rgb(212, 255, 183);
+            }
+            #vidtext span{
+                font-size: 20px;
+                color: rgb(87, 131, 66);
             }
                 
             div.box2{
@@ -258,6 +285,34 @@
                 </header>
 
                 <h1 id="h1" style="text-align: center; font-size: 50px; color: white; margin: 40px 0;">2x2 Cube</h1>
+                <div id="vid1" style="margin-left: 200px;">
+                    <iframe id="clip" style="float: left;"
+                    width="560" height="315" frameborder="1" allowfullscreen
+                    src="https://www.youtube.com/embed/GANnG5a19kg">
+                    </iframe>
+                    <p id="vidtext" style="float: right; margin: 0px; margin-right: 390px; margin-top: 20px;">
+                        <strong>2x2 - Beginner's Method</strong><br>
+                        <span>
+                            Denne video forklarer godt, hvordan man kan lære at løse<br>
+                            en 2x2 Rubik's Cube med en god <span style="font-style: italic;"><strong>begyndermetode</strong></span>.<br>
+                            At løse en 2x2 er lidt ligesom at løse en 3x3 med færre felter.
+                        </span>
+                    </p>
+                </div>
+                <div id="vid2" style="margin-right: 200px;">
+                    <iframe id="clip" style="float: right;"
+                    width="560" height="315" frameborder="1" allowfullscreen
+                    src="https://www.youtube.com/embed/z2gOUzMmY3w">
+                    </iframe>
+                    <p id="vidtext" style="text-align: right; float: right; margin: 0px; margin-right: 40px; margin-top: 20px;">
+                        <strong>2x2 - Ortega Method</strong><br>
+                        <span>
+                            <span style="font-style: italic;"><strong>Ortega Method</strong></span> er en rigtig god metode at lære efter begyndermetoden<br>
+                            for at blive hurtigere i sine tider.<br>
+                            Den kræver dog, at man lærer nogle <span style="font-style: italic;"><strong>algoritmer</strong></span> til de forskellige <span style="font-style: italic;"><strong>cases</strong></span>.
+                        </span>
+                    </p>
+                </div>
                 <div class="box2" onclick="toggleText1('toToggle1')">Text
                     <div id="toToggle1">Text</div>
                 </div>
