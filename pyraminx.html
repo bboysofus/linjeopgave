@@ -34,25 +34,24 @@
             #vid1{grid-area: vid1;}
             #vid2{grid-area: vid2;}
             .box2{grid-area: box2;}
-            .box3{grid-area: box3;}
-            .box4{grid-area: box4;}
             #item5-footer{grid-area: footer;}
-            #item6{grid-area: space1;}
-            #item7{grid-area: space2;}
+            #item3{grid-area: space1;}
+            #item4{grid-area: space2;}
 
             #grid-container{
                 display: grid;
                 grid-template-areas: 
-                    'header header header header header'
-                    'space1 h1 h1 h1 space2'
-                    'space1 vid1 vid1 vid1 space2'
-                    'space1 vid2 vid2 vid2 space2'
-                    'space1 box2 box3 box4 space2'
-                    'footer footer footer footer footer';
+                    'header header header header'
+                    'space1 h1 h1 space2'
+                    'space1 vid1 vid1 space2'
+                    'space1 vid2 vid2 space2'
+                    'space1 box2 box2 space2'
+                    'footer footer footer footer';
                 grid-column-gap: 100px;
                 grid-row-gap: 20px;
                 position: relative;
             }
+
             #item1-header{
                 background-color: #006939;
                 color: black;
@@ -324,26 +323,12 @@
                         </span>
                     </p>
                 </div>
-                <div class="box2" onclick="toggleText1('toToggle1')">Text
+                <div class="box2" onclick="toggleText1('toToggle1')">Historie
                     <div id="toToggle1">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box3" onclick="toggleText2('toToggle2')">Text
-                    <div id="toToggle2">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
-                        </p>
-                    </div>   
-                </div>
-
-                <div class="box4" onclick="toggleText3('toToggle3')">Text
-                    <div id="toToggle3">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
+                        <p style="margin: 0; padding-left: 580px;">
+                            Cuben <span style="font-style: italic;"><strong>"Pyraminx"</strong></span> er lavet og har fået patent af <span style="font-style: italic;"><strong>Uwe Mèffert</strong></span> efter<br>
+                            den originale 3x3 cube af <span style="font-style: italic;"><strong>Ernő Rubik</strong></span>, og den blev introduceret<br>
+                            af <span style="font-style: italic;"><strong>"Tomy Toys"</strong></span> i Japan i <span style="font-style: italic;"><strong>år 1981</strong></span>, som dengang var verdens tredjestørste lejetøjsfirma.<br>
                         </p>
                     </div>
                 </div>
@@ -373,8 +358,8 @@
                     </div>
                 </footer>
 
-                <div id="item6"></div>
-                <div id="item7"></div>
+                <div id="item3"></div>
+                <div id="item4"></div>
 
             </div>
         </main>
@@ -382,18 +367,6 @@
     
     <script>
         function toggleText1(id){
-            var theText = document.getElementById(id);
-            (theText.style.display=='block') ? theText.style.display='none' :
-            theText.style.display='block';
-        }
-
-        function toggleText2(id){
-            var theText = document.getElementById(id);
-            (theText.style.display=='block') ? theText.style.display='none' :
-            theText.style.display='block';
-        }
-
-        function toggleText3(id){
             var theText = document.getElementById(id);
             (theText.style.display=='block') ? theText.style.display='none' :
             theText.style.display='block';
