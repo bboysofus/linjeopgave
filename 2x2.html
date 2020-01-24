@@ -34,21 +34,19 @@
             #vid1{grid-area: vid1;}
             #vid2{grid-area: vid2;}
             .box2{grid-area: box2;}
-            .box3{grid-area: box3;}
-            .box4{grid-area: box4;}
+            #item3{grid-area: space1;}
+            #item4{grid-area: space2;}
             #item5-footer{grid-area: footer;}
-            #item6{grid-area: space1;}
-            #item7{grid-area: space2;}
 
             #grid-container{
                 display: grid;
                 grid-template-areas: 
-                    'header header header header header'
-                    'space1 h1 h1 h1 space2'
-                    'space1 vid1 vid1 vid1 space2'
-                    'space1 vid2 vid2 vid2 space2'
-                    'space1 box2 box3 box4 space2'
-                    'footer footer footer footer footer';
+                    'header header header header'
+                    'space1 h1 h1 space2'
+                    'space1 vid1 vid1 space2'
+                    'space1 vid2 vid2 space2'
+                    'space1 box2 box2 space2'
+                    'footer footer footer footer';
                 grid-column-gap: 100px;
                 grid-row-gap: 20px;
                 position: relative;
@@ -65,6 +63,17 @@
                 border-radius: 5px;
             }
             
+            #h1{
+                transition: all 0.2s ease;
+                color: white;
+                text-align: center;
+                margin: 40px 0;
+                cursor: default;
+            }
+            #h1:hover{
+                color: rgb(212, 255, 183);
+            }
+
             #vid1{
                 background: linear-gradient( to left, #002e19 50%, #004123 50%);
                 background-size: 200% 100%;
@@ -119,67 +128,6 @@
                 display: none;
             }
 
-            div.box3{
-                cursor: pointer;
-                overflow: hidden;
-                margin-top: 20px;
-                transition: 0.3s;
-                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
-                background-size: 100% 200%;
-                background-position: top;
-                color: rgb(212, 255, 183);
-                padding: 20px 0;
-                font-size: 30px;
-                text-align: center;
-                position: relative;
-                border: 2px solid  #1c1c1a;
-                border-radius: 13px;
-                text-decoration: none;
-            }
-            div.box3:hover{
-                background-position: bottom;
-                padding: 20px 0;
-            }
-            div.box3 div{
-                color: rgb(87, 131, 66);
-                background-color: #093e26;
-                padding: 10px;
-                margin-top: 20px;
-                text-align: left;
-                font-size: 23px;
-                display: none;
-            }
-
-            div.box4{
-                cursor: pointer;
-                overflow: hidden;
-                margin-top: 20px;
-                transition: 0.3s;
-                background: linear-gradient(to top, #7cffc421 50%, #7cffc413 50%);
-                background-size: 100% 200%;
-                background-position: top;
-                color: rgb(212, 255, 183);
-                padding: 20px 0;
-                font-size: 30px;
-                text-align: center;
-                position: relative;
-                border: 2px solid  #1c1c1a;
-                border-radius: 13px;
-                text-decoration: none;
-                }
-            div.box4:hover{
-                background-position: bottom;
-                padding: 20px 0;
-            }
-            div.box4 div{
-                color: rgb(87, 131, 66);
-                background-color: #093e26;
-                padding: 10px;
-                margin-top: 20px;
-                text-align: left;
-                font-size: 23px;
-                display: none;
-            }
             #item5-footer{
                 overflow: hidden;
                 background-color: #006939;
@@ -284,7 +232,7 @@
                     </div>
                 </header>
 
-                <h1 id="h1" style="text-align: center; font-size: 50px; color: white; margin: 40px 0;">2x2 Cube</h1>
+                <div id="h1"><h1 style="margin: 0; font-size: 50px;">2x2 Cube</h1></div>
                 <div id="vid1" style="margin-left: 200px;">
                     <iframe id="clip" style="float: left;"
                     width="560" height="315" frameborder="1" allowfullscreen
@@ -313,27 +261,19 @@
                         </span>
                     </p>
                 </div>
-                <div class="box2" onclick="toggleText1('toToggle1')">Text
+                <div class="box2" onclick="toggleText1('toToggle1')">Historie
                     <div id="toToggle1">
-                        <p style="margin: 0; padding-left: 10px;"> 
-                            Text
+                        <p style="margin: 0; padding-left: 10px; text-align: center;"> 
+                            I <span style="font-style: italic;"><strong>marts 1970</strong></span> opfandt <span style="font-style: italic;"><strong>Larry D. Nichols</strong></span> denne cube,<br>
+                            som han kaldte for <span style="font-style: italic;"><strong>"Pocket Cube"</strong></span>.<br>
+                            På hans første prototype hængte brikkerne sammen via magneter.<br>
+                            <br>
+                            Han fik patent på den i <span style="font-style: italic;"><strong>april 1972</strong></span>, hvilket var to år<br>
+                            før <span style="font-style: italic;"><strong>Ernő Rubik</strong></span> opfandt sin 3x3 cube.<br>
+                            <br>
+                            Her er et billede at tegningen af 2x2 cuben:
                         </p>
-                    </div>
-                </div>
-
-                <div class="box3" onclick="toggleText2('toToggle2')">Text
-                    <div id="toToggle2">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
-                        </p>
-                    </div>   
-                </div>
-
-                <div class="box4" onclick="toggleText3('toToggle3')">Text
-                    <div id="toToggle3">
-                        <p style="margin: 0; padding-left: 10px;">
-                            Text
-                        </p>
+                        <img src="png/Pocket cube.png" style="max-width: 30%; margin-left: 595px; margin-top: 20px;">
                     </div>
                 </div>
 
@@ -362,6 +302,8 @@
                     </div>
                 </footer>
 
+                <div id="item3"></div>
+                <div id="item4"></div>
                 <div id="item6"></div>
                 <div id="item7"></div>
 
@@ -371,18 +313,6 @@
     
     <script>
         function toggleText1(id){
-            var theText = document.getElementById(id);
-            (theText.style.display=='block') ? theText.style.display='none' :
-            theText.style.display='block';
-        }
-
-        function toggleText2(id){
-            var theText = document.getElementById(id);
-            (theText.style.display=='block') ? theText.style.display='none' :
-            theText.style.display='block';
-        }
-
-        function toggleText3(id){
             var theText = document.getElementById(id);
             (theText.style.display=='block') ? theText.style.display='none' :
             theText.style.display='block';

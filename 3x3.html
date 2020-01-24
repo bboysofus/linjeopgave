@@ -30,7 +30,7 @@
             }
 
             #item1-header{grid-area: header;}
-            h1{grid-area: h1;}
+            #h1{grid-area: h1;}
             #vid1{grid-area: vid1;}
             #vid2{grid-area: vid2;}
             .box2{grid-area: box2;}
@@ -62,6 +62,17 @@
                 position: relative;
                 border: 2px solid black;
                 border-radius: 5px;
+            }
+
+            #h1{
+                transition: all 0.2s ease;
+                color: white;
+                text-align: center;
+                margin: 40px 0;
+                cursor: default;
+            }
+            #h1:hover{
+                color: rgb(212, 255, 183);
             }
 
             #vid1{
@@ -252,7 +263,7 @@
                     </div>
                 </header>
                 
-                <h1 id="h1" style="text-align: center; font-size: 50px; color: white; margin: 40px 0;">3x3 Cube</h1>
+                <div id="h1"><h1 style="margin: 0; font-size: 50px;">3x3 Cube</h1></div>
                 <div id="vid1" style="margin-left: 200px;">
                     <iframe id="clip" style="float: left;"
                     width="560" height="315" frameborder="1" allowfullscreen
