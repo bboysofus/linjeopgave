@@ -30,12 +30,7 @@
             }
 
             #item1-header{grid-area: header;}
-            #vid1{grid-area: vid1;}
-            #vid2{grid-area: vid2;}
-            #vid3{grid-area: vid3;}
-            #box2{grid-area: box2;}
-            #box3{grid-area: box3;}
-            #box4{grid-area: box4;}
+            #h1{grid-area: h1;}
             #item5-footer{grid-area: footer;}
             #item6{grid-area: space1;}
             #item7{grid-area: space2;}
@@ -44,10 +39,7 @@
                 display: grid;
                 grid-template-areas: 
                     'header header header header header'
-                    'space1 vid1 vid1 vid1 space2'
-                    'space1 vid2 vid2 vid2 space2'
-                    'space1 vid3 vid3 vid3 space2'
-                    'space1 box2 box3 box4 space2'
+                    'space1 h1 h1 h1 space2'
                     'footer footer footer footer footer';
                 grid-column-gap: 100px;
                 grid-row-gap: 20px;
@@ -160,7 +152,6 @@
                 padding: 0 auto;
                 bottom: 0;
                 margin: 3px;
-                margin-top: 99px;
                 font-size: 30px;
                 text-align: center;
                 position: relative;
@@ -258,6 +249,8 @@
                     </div>
                 </header>
                 
+                <h1 id="h1" style="text-align: center; color: white; font-size: 50px;">Her virker tomt lige nu...</h1>
+
                 <footer id="item5-footer">
                     <div id="footer-container">
                         <div id="footer-navi">
